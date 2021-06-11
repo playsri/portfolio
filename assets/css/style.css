@@ -477,9 +477,10 @@ section {
 
 .contact .info {
   padding: 30px;
-  background: #f5f8fd;
-  width: 100%;
+  background: #040b14cb;
+  width: 80%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
 }
 
 .contact .info i {
@@ -501,14 +502,14 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: #f4f6fd;
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #fff;
 }
 
 .contact .info .email p {
