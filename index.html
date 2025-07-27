@@ -116,7 +116,7 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Software Developer</h3>
             <p class="fst-italic">
-              23 years old M.tech Student working in Wipro Limited.
+              <span id="age-text"></span> years old M.tech Student working in Wipro Limited.
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -428,6 +428,33 @@
 
 
   <script src="assets/js/main.js"></script>
+    <script>
+        function calculateAge(birthDateString) {
+            const birthDate = new Date(birthDateString);
+            const today = new Date();
+            
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+            
+            // If the current month is before the birth month, or if it's the same month but an earlier day, subtract one year.
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            return age;
+        }
+
+        // Set the calculated age in the 'About Me' section
+        const age = calculateAge('2000-12-24');
+        document.getElementById('age-text').textContent = age;
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
